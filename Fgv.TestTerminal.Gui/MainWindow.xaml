@@ -1,0 +1,17 @@
+﻿<Window x:Class="Fgv.TestTerminal.Gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fgv.TestTerminal.Gui"
+        mc:Ignorable="d"
+        WindowStyle="SingleBorderWindow"
+        Title="MainWindow" Width="800" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" >
+    <Grid x:Name="Main" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="Address" Content="Recuperar endereço" HorizontalAlignment="Left" Margin="200,-54,0,0" VerticalAlignment="Top" Width="200" Height="35" Click="Address_Click" FontSize="14"/>
+        <TextBox x:Name="Cep" HorizontalAlignment="Left" Margin="0,-54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="35" BorderBrush="Black" Background="#FFE1E1E1" FontSize="14"/>
+        <Label Content="CEP" HorizontalAlignment="Right" Margin="0,-86,218,0" VerticalAlignment="Top" Width="182" FontSize="14"/>
+        <TextBox x:Name="AddressInfo" HorizontalAlignment="Center" Height="128" TextWrapping="Wrap" VerticalAlignment="Center" Width="400" BorderBrush="Black" FontSize="16"/>
+
+    </Grid>
+</Window>
