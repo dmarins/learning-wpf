@@ -17,14 +17,14 @@ namespace Fgv.TestTerminal.Gui.Infrastructure.Clients
             HttpClient = new HttpClient();
             HttpRequestMessage = new HttpRequestMessage
             {
-                RequestUri = new Uri("https://viacep.com.br/ws/"),
+                RequestUri = new Uri("http://localhost:5000/candidate/cep/getcep"),
                 Method = HttpMethod.Get
             };
         }
 
         public async Task<AddressResponse> GetAddressInfo(AddressRequest contract)
         {
-            HttpRequestMessage.RequestUri = new Uri($"{HttpRequestMessage.RequestUri}{contract.Cep}/json");
+            HttpRequestMessage.RequestUri = new Uri($"{HttpRequestMessage.RequestUri}?cep={contract.Cep}");
 
             var response = await HttpClient.SendAsync(HttpRequestMessage);
             if (response.IsSuccessStatusCode == false) return new AddressResponse();
